@@ -1,0 +1,110 @@
+import { Meta, Story, Props, Preview } from '@storybook/addon-docs/blocks';
+import { Button } from '.';
+import { Heading, Box, Icons, Flex } from '..';
+
+<Meta title="Components/Button" component={Button} />
+
+# Basic Button Component
+
+Primitive button component with primary, secondary & transparent variants
+
+export const Template = ({ variant }) => (
+  <Box>
+    <Flex mb={3}>
+      <Button variant={variant} mr={3}>
+        Primary
+      </Button>
+      <Button variant={variant} mr={3} disabled>
+        Disabled
+      </Button>
+      <Button variant={variant} mr={3} isLoading>
+        Loading
+      </Button>
+    </Flex>
+    <Flex mb={3}>
+      <Button variant={variant} mr={3}>
+        Flexible Width
+      </Button>
+      <Button variant={variant} mr={3} width={200}>
+        Fixed Width: 200px
+      </Button>
+    </Flex>
+    <Flex mb={3}>
+      <Button variant={variant} leftIcon={<Icons.Loader aria-hidden />} mr={3}>
+        Left Icon
+      </Button>
+      <Button variant={variant} rightIcon={<Icons.Loader aria-hidden />} mr={3}>
+        Right Icon
+      </Button>
+      <Button
+        variant={variant}
+        leftIcon={<Icons.Loader aria-hidden />}
+        rightIcon={<Icons.Loader aria-hidden />}
+        mr={3}
+      >
+        Both Icon
+      </Button>
+    </Flex>
+  </Box>
+);
+
+### Primary
+
+<Preview withToolbar>
+  <Story name="primary" args={{ variant: 'primary' }}>
+    {Template.bind({})}
+  </Story>
+</Preview>
+
+### Secondary
+
+<Preview withToolbar>
+  <Story name="secondary" args={{ variant: 'secondary' }}>
+    {Template.bind({})}
+  </Story>
+</Preview>
+
+### Transparent
+
+<Preview withToolbar>
+  <Story name="transparent" args={{ variant: 'transparent' }}>
+    {Template.bind({})}
+  </Story>
+</Preview>
+
+### Accessibility
+
+You may provide labelling alternatives for use with assistive-technologies (AT) using wai-aria attributes.
+Below is a table of commonly used `aria-attributes` for labelling elements.
+
+Click the attribute in the table below for more information.
+
+<Box mb={4}>
+  <Flex flexDirection="column">
+
+Attribute | Description
+--- | ---
+<nobr>[**`aria-label`**](https://www.w3.org/WAI/PF/aria/states_and_properties#aria-label)</nobr> | Provide an accessible name for situations when there is no visible label due to a chosen design approach or layout but the context and visual appearance of the control make its purpose clear.
+<nobr>[**`aria-labelledby`**](https://www.w3.org/WAI/PF/aria/states_and_properties#aria-labelledby)</nobr> | Associate an element with text that is visible elsewhere on the page by using an ID reference value that matches the ID attribute of the labeling element.
+<nobr>[**`aria-describedby`**](https://www.w3.org/WAI/PF/aria/states_and_properties#aria-describedby)</nobr> | Provide programmatically determined, descriptive information about a user interface element.
+
+#### Code Examples 
+
+```jsx
+<Button aria-label="Open the Modal">Open</Button>
+
+<span id='close-label'>Close the Modal</span>
+<Button aria-labelledby="close-label"><img src="./x-btn.png" /></Button>
+
+<Button aria-describedby="desc-label-1, desc-label-2">OK</Button>
+<span id='desc-label-1'>You acknowledge this notice.</span>
+<span id='desc-label-2'>Close the Modal</span>
+```
+
+
+  </Flex>
+</Box>
+
+## Component Props
+
+<Props of={Button} />

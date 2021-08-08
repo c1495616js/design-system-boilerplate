@@ -14,9 +14,7 @@ import {
   PositionProps,
   SpaceProps,
 } from 'styled-system';
-import { Box, BoxProps } from '../box';
-import { Flex } from '../flex';
-// import { Spinner } from '../spinner';
+import { Box, BoxProps, Flex, Spinner } from '..';
 import { focusRing } from '../shared-styles';
 
 export type StyledButtonProps = SpaceProps &
@@ -170,7 +168,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       ml={ml}
       mr={mr}
     >
-      {/* {isLoading && (
+      {isLoading && (
         <Spinner
           display="flex"
           alignItems="center"
@@ -182,7 +180,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           left={0}
           size={4}
         />
-      )} */}
+      )}
       <Flex
         alignItems="center"
         position="relative"
