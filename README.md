@@ -5,8 +5,17 @@
 ## Refs
 
 - https://github.com/rangle/radius
+- https://github.com/radix-ui
 - https://dev.to/hamatoyogi/how-to-build-a-react-ts-tailwind-design-system-1ppi
 - https://leerob.io/blog/style-guides-component-libraries-design-systems
+- https://react.lightningdesignsystem.com/
+- https://designsystem.digital.gov/
+- https://www.duetds.com/
+- http://ui.zenefits.com/#!/Introduction
+- https://cultureamp.design/
+- https://designsystem.quickbooks.com/
+- https://designsystem.telus.com/
+- https://www.designsystem.tech.gov.sg/
 
 # TSDX React w/ Storybook User Guide
 

@@ -7,3 +7,4 @@ export * from './heading';
 export * from './grid';
 export * from './button';
 export * from './checkbox';
+export * from './aspect-ratio';
