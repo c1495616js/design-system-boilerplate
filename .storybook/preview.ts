@@ -13,7 +13,6 @@ addParameters({
   },
 });
 
-
 addParameters({
   viewport: {
     viewports: {
@@ -49,3 +48,21 @@ addParameters({
     defaultViewport: 'Small Mobile',
   },
 });
+
+// create a port root
+let modalRoot = document.createElement('div');
+modalRoot.setAttribute('id', 'portal-root');
+modalRoot.setAttribute(
+  'style',
+  `
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 30px;
+  `
+);
+document.querySelector('body')!.appendChild(modalRoot);
