@@ -66,3 +66,23 @@ modalRoot.setAttribute(
   `
 );
 document.querySelector('body')!.appendChild(modalRoot);
+
+modalRoot = document.createElement('div');
+modalRoot.setAttribute('id', 'modal-root');
+// modalRoot.setAttribute(
+//   'style',
+//   `
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: 0;
+//     width: 100vw;
+//     height: 100vh;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//   `
+// );
+document.querySelector('body')!.appendChild(modalRoot);
